@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Random Quote</title>
+    <script>
+        const QOUTEBANK = [
+        {
+    quote:
+      "You can't live your life for other people. You've got to do what's right for you, even if it hurts some people you love.",
+    author: "Nicholas Sparks"
+  },
+  {
+    quote: "Life is 10% what happens to me and 90% of how I react to it.",
+    author: "Charles Swindoll"
+  },
+  {
+    quote: "Be the change that you wish to see in the world",
+    author: "Mahatma Gandhi"
+  },
+  {
+    quote:
+      "To live is the rarest thing in the world. Most people exist, that is all.",
+    author: "Oscar Wilde"
+  },
+  {
+    quote:
+      "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    author: "Mahatma Gandhi"
+  },
+  {
+    quote:
+      "It is better to be hated for what you are than to be loved for what you are not.",
+    author: "Andre Gide"
+  }
+        ]
+        window.onload = init;
+        function init() {
+            generateQuote()
+        }
+       function generateQuote() {
+            console.log("genera uote")
+            console.log("JS loading")
+      
+            let data = Math.floor(Math.random() * QOUTEBANK.length)
+            document.getElementById("text").innerText = QOUTEBANK[data].quote
+            document.getElementById("author").innerText = QOUTEBANK[data].author
+        }
+    </script>
+</head>
+<body>
+
+    <wrapper id="quote-box">
+        <div id="text"></div>
+        <div id="author"></div>
+           <button  id="new-quote" onclick="generateQuote();"> New Quote</button>
+           <a href="https://twitter.com/intent/tweet?text=FreeCodeCamp%2Hello%20world"
+           data-size="large" id="tweet-quote">Tweet Quote</a>
+       
+    </wrapper>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
