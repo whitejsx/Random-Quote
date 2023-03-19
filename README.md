@@ -1,6 +1,6 @@
 # A freecode certificate task for frontend library 
 
- ## [Application link ]()
+ ## [Application link ](https://whitejsx.github.io/Random-Quote/)
 ## user story 
 - Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.
 
